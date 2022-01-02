@@ -14,7 +14,7 @@
   --main-color-two: #89C541;
   --main-color-three: #F9A248;
 
-  --temp-color: #e5e289;
+  --temp-color: #e7e25d;
   --temp-color-two: #b4eb9a;
 }
 
@@ -177,6 +177,24 @@
 .buttons {
   display: flex;
   justify-content: space-around;
+}
+.time-taken-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e25d32;
+  color: var(--temp-color);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 160px;
+  margin-left: 30px;
+}
+
+.time-taken-badge h4 {
+  margin-left: 5px;
+  margin-top: 1px;
 }
 
 .footer {
