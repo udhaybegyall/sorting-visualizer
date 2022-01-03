@@ -48,12 +48,24 @@ const Sidebar = () => {
 
                     <h6 style={{ marginTop: "20px" }}>SLIDERS</h6>
 
-                    <div className="sliders">
-                        <Slider defaultValue={50} min={2} max={100} onChange={handleBars} />
+
+                    <div className="slider-container">
+                        <h5>BARS LENGTH</h5>
+                        <div className="sliders">
+                            <p id='p1'>2</p>
+                            <Slider defaultValue={50} min={2} max={100} onChange={handleBars} />
+                            <p id='p2'>100</p>
+                        </div>
                     </div>
 
-                    <div className="sliders">
-                        <Slider defaultValue={1} min={1} max={4} onChange={handleDelay} />
+
+                    <div className="slider-container">
+                        <h5>SPEED</h5>
+                        <div className="sliders">
+                            <p id='p1'>1x</p>
+                            <Slider defaultValue={1} min={1} max={4} onChange={handleDelay} />
+                            <p id='p2'>4x</p>
+                        </div>
                     </div>
 
                     <hr style={hrStyles.hrStyle_two} />
