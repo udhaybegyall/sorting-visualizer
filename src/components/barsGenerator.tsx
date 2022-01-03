@@ -28,7 +28,7 @@ const BarsGenerator = () => {
     });
 
     return (
-        <div style={{ marginTop: "70px" }} className="bars-container">
+        <div className="bars-container">
             {barsList}
         </div>
     );
