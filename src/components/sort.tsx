@@ -61,9 +61,8 @@ const Sort = () => {
     return (
         <React.Fragment>
             <div className="buttons">
-                <Button name="Sort" onClick={sortBars} />
-                <Button name="Generate" onClick={() => console.log("Generate")} />
-                <p>{timer}</p>
+                <Button name="Sort" onClick={sortBars} bgColor='#d79921' color='#ebdbb2' />
+                <Button name="Generate" onClick={() => console.log("Generate")} bgColor='#d79a213b' color='#d79921' />
             </div>
         </React.Fragment>
     )
