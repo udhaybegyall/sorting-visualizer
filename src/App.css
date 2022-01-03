@@ -5,8 +5,8 @@
 }
 
 #root {
-  --primary-color : #151515;
-  --secondary-color : #1d1c1c;
+  --primary-color : #272727;
+  --secondary-color : #282828;
   --tertiary-color : #323234;
   --quaternary-color : #141414;
 
@@ -37,15 +37,34 @@
 
 .navbar {
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  border-bottom: 1px solid #313131;
   /* position: fixed;
   top: 0; */
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
   /* width: 100%; */
   height: 80px;
   z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+}
+
+.logo {
+  color: #ebdbb2;
+  width: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: .9;
+}
+
+.logo h3 {
+  width: 95px;
 }
 
 /* ---------------------------NavBar Css End--------------------------------- */
@@ -59,24 +78,31 @@
 }
 
 .main-bar {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background-color: var(--secondary-color);
   border-radius: 10px;
   width: 100%;
   height: 80vh;
   margin-right: 10px;
+  border: 1px solid #313131;
 }
 
 .sidebar {
   /* margin-right: 8px; */
   background-color: var(--secondary-color);
   border-radius: 10px;
-  color: rgb(190, 187, 187);
+  color: #ebdbb2;
   /* box-sizing: border-box; */
   padding: 20px;
-  width: 380px;
+  width: 450px;
   /* height: 100vh; */
   z-index: 1;
   font-size: 20px;
+  border: 1px solid #313131;
 }
 
 .sidebar-header h4 {
@@ -91,7 +117,7 @@
   position: relative;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 918px) {
   .both-bars {
     flex-direction: column;
     align-items: center;
@@ -107,19 +133,49 @@
   }
 }
 
-.sliders {
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  padding: 20px;
+.slider-container {
   margin-top: 20px;
+}
+
+.slider-container h5 {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #665c54;
+}
+
+.sliders {
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: #242424;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sliders p {
+  color: #665c54;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sliders #p1 {
+  margin-top: -4px;
+  margin-right: 20px;
+}
+
+.sliders #p2 {
+  margin-top: -4px;
+  margin-left: 20px;
 }
 
 /* ---------------------------Bars Css--------------------------------- */
 
 .bars-container {
   padding: 20px;
-  height:39vh;
   border-radius: 10px;
+  height: 35vh;
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
@@ -137,7 +193,7 @@
   max-width: 30px;
   width: 50%;
   height: 100%;
-  background-color: var(--tertiary-color);
+  background-color: #383532;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
 }
@@ -175,6 +231,7 @@
 }
 
 .buttons {
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
 }
@@ -182,8 +239,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e7e25d32;
-  color: var(--temp-color);
+  background-color: #d79a2121;
+  color: #d79921;
   border-radius: 5px;
   padding: 5px;
   font-size: 12px;
@@ -199,7 +256,8 @@
 
 .footer {
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  border: 1px solid #313131;
+  border-radius: 10px 10px 0 0;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
