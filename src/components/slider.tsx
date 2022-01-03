@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 const RangeSlider = styled(Slider)({
-    color: '#76c74a',
+    color: '#d79921',
     height: 5.8,
     '& .MuiSlider-track': {
         border: 'none',
@@ -36,7 +36,7 @@ const RangeSlider = styled(Slider)({
         height: 32,
         borderRadius: '50% 50% 50% 0',
         color: '#1d1f20',
-        backgroundColor: '#76c74a',
+        backgroundColor: '#d79921',
         transformOrigin: 'bottom left',
         transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
         '&:before': { display: 'none' },
