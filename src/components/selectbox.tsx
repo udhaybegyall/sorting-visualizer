@@ -14,7 +14,7 @@ const options = [
 const styles = {
     control: (base: any, state: any) => ({
         ...base,
-        backgroundColor: '#28272a',
+        backgroundColor: '#242424',
         width: '100%',
         border: 'none',
         borderRadius: '5px',
@@ -28,8 +28,8 @@ const styles = {
     }),
     option: (base: any, state: any) => ({
         ...base,
-        backgroundColor: '#28272a',
-        color: '#76c74a',
+        backgroundColor: '#242424',
+        color: '#665c54',
         fontSize: '14px',
         fontWeight: 'bold',
         '&:hover': {
@@ -38,13 +38,13 @@ const styles = {
     }),
     singleValue: (base: any, state: any) => ({
         ...base,
-        color: '#76c74a',
+        color: '#d79a21bb',
         fontSize: '14px',
         fontWeight: 'bold',
     }),
     placeholder: (base: any, state: any) => ({
         ...base,
-        color: '#76c74a',
+        color: '#665c54',
         fontSize: '14px',
         fontWeight: 'bold',
     }),
@@ -59,6 +59,12 @@ const styles = {
     indicatorSeparator: (base: any, state: any) => ({
         ...base,
         display: 'none',
+    }),
+    // change the dropdown arrow
+    dropdownIndicator: (base: any, state: any) => ({
+        ...base,
+        color: '#665c54',
+        transform: state.selectProps.menuIsOpen ? 'rotate(180deg)' : 'rotate(0deg)',
     }),
 };
 
