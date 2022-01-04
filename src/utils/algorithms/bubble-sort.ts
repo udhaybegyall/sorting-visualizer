@@ -9,16 +9,16 @@ const bubbleSort = async (array: any[], delay: number) => {
             if (parseInt(array[i].style.height.slice(0, -2)) > parseInt(array[i + 1].style.height.slice(0, -2))) {
 
                 await timeout(delay);
-                array[i].style.backgroundColor = 'yellow';
-                array[i + 1].style.backgroundColor = 'yellow';
+                array[i].style.backgroundColor = '#d79921';
+                array[i + 1].style.backgroundColor = '#d79921';
 
                 await timeout(delay);
                 swap(array, i, i + 1);
                 swapped = true;
 
                 await timeout(delay);
-                array[i].style.backgroundColor = '#323234';
-                array[i + 1].style.backgroundColor = '#323234';
+                array[i].style.backgroundColor = '#383532';
+                array[i + 1].style.backgroundColor = '#383532';
             }
         }
     }

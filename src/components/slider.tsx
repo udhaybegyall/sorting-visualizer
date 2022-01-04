@@ -47,6 +47,27 @@ const RangeSlider = styled(Slider)({
             transform: 'rotate(45deg)',
         },
     },
+    // disabled styles
+    '&.Mui-disabled': {
+        color: '#323234',
+        '& .MuiSlider-rail': {
+            backgroundColor: '#323234',
+        },
+        '& .MuiSlider-track': {
+            backgroundColor: '#323234',
+        },
+        '& .MuiSlider-thumb': {
+            backgroundColor: '#323234',
+            border: '2px solid #665c54',
+            '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
+                boxShadow: 'none',
+            },
+            '&:before': {
+                display: 'none',
+            },
+        },
+    },
+
 });
 
 export default function CustomizedSlider(props: any) {
@@ -58,6 +79,7 @@ export default function CustomizedSlider(props: any) {
                 min={props.min}
                 max={props.max}
                 onChange={props.onChange}
+                disabled={false}
             />
         </Box>
     );

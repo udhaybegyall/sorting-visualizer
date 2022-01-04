@@ -1,5 +1,5 @@
 import Button from './button';
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalState } from "../store/GlobalState";
 
 import SelectedAlgorithm from '../utils/select-algo';
@@ -47,7 +47,9 @@ const Sort = () => {
         clearInterval(timer);
     };
 
-    console.log(isSorting);
+    useEffect(() => {
+        console.debug(isSorting);
+    }, [isSorting]);
 
     // sort bars in Bars component with bubble sort
     const sortBars = () => {

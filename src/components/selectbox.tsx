@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Select from 'react-select';
 
 import { GlobalState } from '../store/GlobalState';
@@ -72,19 +72,16 @@ const Selectbox = () => {
 
     const { setAlgo, algo } = useContext(GlobalState);
 
-    const onSelect = (selected: any) => {
-        setAlgo!(selected.value);
-    }
-
-    console.log(algo);
+    console.debug(algo);
 
     return (
         <div style={{ marginTop: "20px" }}>
             <Select
                 styles={styles}
                 options={options}
-                onChange={onSelect}
+                onChange={(selected: any) => setAlgo!(selected.value)}
                 placeholder="Select algorithm"
+                isDisabled={false}
             />
         </div>
     )
