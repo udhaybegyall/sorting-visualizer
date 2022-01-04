@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import { GlobalState } from '../store/GlobalState';
+
 import Slider from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -71,6 +74,9 @@ const RangeSlider = styled(Slider)({
 });
 
 export default function CustomizedSlider(props: any) {
+
+    const { issorting } = useContext(GlobalState);
+
     return (
         <Box className="slider" sx={{ width: "100%" }}>
             <RangeSlider
@@ -79,7 +85,7 @@ export default function CustomizedSlider(props: any) {
                 min={props.min}
                 max={props.max}
                 onChange={props.onChange}
-                disabled={false}
+                disabled={issorting}
             />
         </Box>
     );

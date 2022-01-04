@@ -6,7 +6,7 @@ import SelectedAlgorithm from '../utils/select-algo';
 
 const Sort = () => {
 
-    const { algo, delay } = useContext(GlobalState);
+    const { algo, delay, setTimeTaken, setIsSorting } = useContext(GlobalState);
 
     let customDelay = 0;
     switch (delay) {
@@ -26,22 +26,21 @@ const Sort = () => {
             customDelay = 0;
     }
 
-    // make a timer that counts until the bars are sorted
-    const [timer, setTimer] = React.useState(0);
-    const [isSorting, setIsSorting] = React.useState(false);
+    const [isSorting, setIssSorting] = React.useState(false);
 
     const handleSort = async (array: any[], algorithm: String, customDelay: number) => {
         let sec = 0;
-        setIsSorting(true);
+        setIssSorting(true);
 
         let timer = setInterval(() => {
             sec++;
-            setTimer(sec);
+            setTimeTaken?.(sec);
         }, 1000);
+
 
         await SelectedAlgorithm(array, algorithm, customDelay);
 
-        setIsSorting(false);
+        setIssSorting(false);
 
         // STOP TIMER AFTER SORTING
         clearInterval(timer);
@@ -49,14 +48,13 @@ const Sort = () => {
 
     useEffect(() => {
         console.debug(isSorting);
+        setIsSorting?.(isSorting);
     }, [isSorting]);
 
-    // sort bars in Bars component with bubble sort
     const sortBars = () => {
         const bars = document.getElementsByClassName('bar');
         const barsArray = Array.from(bars);
         const barsArrayCopy = [...barsArray];
-        // SelectedAlgorithm(barsArrayCopy, algo, customDelay);
         handleSort(barsArrayCopy, algo, customDelay);
     }
 
