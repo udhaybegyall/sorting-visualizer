@@ -4,7 +4,7 @@ type Action = {
     payload: any
 }
 
-export default (state: any, action: Action) => {
+const AppReducer = (state: any, action: Action) => {
     switch (action.type) {
         case "SET_SLIDER_VALUE":
             return {
@@ -35,3 +35,5 @@ export default (state: any, action: Action) => {
             return state;
     }
 }
+
+export default AppReducer;
