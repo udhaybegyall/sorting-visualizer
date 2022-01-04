@@ -1,9 +1,6 @@
 import timeout from "../timeout";
 
 const mergeSort = async (array: any[], delay: number) => {
-    const swap = (array: any, i: number, j: number) => {
-        [array[i].style.height, array[j].style.height] = [array[j].style.height, array[i].style.height];
-    }
     const merge = async (array: any[], left: number, middle: number, right: number) => {
         const leftArray = array.slice(left, middle + 1);
         const rightArray = array.slice(middle + 1, right + 1);

@@ -2,9 +2,6 @@ import timeout from "../timeout";
 import swap from "../swap";
 
 const quickSort = async (array: any[], delay: number) => {
-    const swap = (array: any, i: number, j: number) => {
-        [array[i].style.height, array[j].style.height] = [array[j].style.height, array[i].style.height];
-    }
     const partition = async (array: any[], left: number, right: number) => {
         const pivot = parseInt(array[Math.floor((right + left) / 2)].style.height.slice(0, -2));
         let i = left;
