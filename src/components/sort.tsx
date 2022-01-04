@@ -44,16 +44,22 @@ const Sort = () => {
         clearInterval(timer);
     };
 
-    // useEffect(() => {
-    //     setIsSorting?.(isSorting);
-    // }, [isSorting]);
-
+    // if scren size is less than 600px go to top of page
+    const scrollToTop = () => {
+        if (window.screen.width < 600) {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    };
 
     const sortBars = () => {
         const bars = document.getElementsByClassName('bar');
         const barsArray = Array.from(bars);
         const barsArrayCopy = [...barsArray];
         handleSort(barsArrayCopy, algo, customDelay);
+        scrollToTop();
     }
 
     return (
