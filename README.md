@@ -1,1 +1,1 @@
-<img src="/src/assets/readme-logo.png">
+<img align="center" src="/src/assets/readme-logo.png">
