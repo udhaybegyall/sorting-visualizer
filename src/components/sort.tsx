@@ -26,11 +26,9 @@ const Sort = () => {
             customDelay = 0;
     }
 
-    const [isSorting, setIssSorting] = React.useState(false);
-
     const handleSort = async (array: any[], algorithm: String, customDelay: number) => {
         let sec = 0;
-        setIssSorting(true);
+        setIsSorting?.(true);
 
         let timer = setInterval(() => {
             sec++;
@@ -40,16 +38,16 @@ const Sort = () => {
 
         await SelectedAlgorithm(array, algorithm, customDelay);
 
-        setIssSorting(false);
+        setIsSorting?.(false);
 
         // STOP TIMER AFTER SORTING
         clearInterval(timer);
     };
 
-    useEffect(() => {
-        console.debug(isSorting);
-        setIsSorting?.(isSorting);
-    }, [isSorting]);
+    // useEffect(() => {
+    //     setIsSorting?.(isSorting);
+    // }, [isSorting]);
+
 
     const sortBars = () => {
         const bars = document.getElementsByClassName('bar');
