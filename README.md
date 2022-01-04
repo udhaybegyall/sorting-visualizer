@@ -1,1 +1,1 @@
-## React Sorting visualizer"# sorting-visualizer" 
+<img src="/src/assets/readme-logo.png">
