@@ -1,5 +1,5 @@
 import Button from './button';
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { GlobalState } from "../store/GlobalState";
 
 import SelectedAlgorithm from '../utils/select-algo';
