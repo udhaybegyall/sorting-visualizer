@@ -7,7 +7,7 @@ const options = [
     { value: 'Bubble sort', label: 'Bubble sort' },
     { value: 'Selection sort', label: 'Selection sort' },
     { value: 'Quick sort', label: 'Quick sort' },
-    { value: 'Merge sort', label: 'Merge sort' },
+    { value: 'Merge sort (under 🚧)', label: 'Merge sort (under 🚧)' },
     { value: 'Insertion sort', label: 'Insertion sort' },
 ];
 
