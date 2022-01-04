@@ -24,7 +24,7 @@ const BarsGenerator = () => {
      * @returns Bar component with random height maped to it by bars array.
      */
     const barsList = bars.map((bar, index) => {
-        return <Bar key={index} height={bar} value={`${bar}`} />
+        return <Bar key={index} height={bar} />
     });
 
     return (
