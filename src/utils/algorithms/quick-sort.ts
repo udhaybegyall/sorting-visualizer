@@ -15,13 +15,13 @@ const quickSort = async (array: any[], delay: number) => {
             }
             if (i <= j) {
                 await timeout(delay);
-                array[i].style.backgroundColor = 'yellow';
-                array[j].style.backgroundColor = 'yellow';
+                array[i].style.backgroundColor = '#d79921';
+                array[j].style.backgroundColor = '#d79921';
                 await timeout(delay);
                 swap(array, i, j);
                 await timeout(delay);
-                array[i].style.backgroundColor = '#323234';
-                array[j].style.backgroundColor = '#323234';
+                array[i].style.backgroundColor = '#383532';
+                array[j].style.backgroundColor = '#383532';
                 i++;
                 j--;
             }
