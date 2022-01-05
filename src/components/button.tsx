@@ -1,4 +1,9 @@
-const button = (props: any) => {
+import { GlobalState } from "../store/GlobalState";
+import { useContext } from "react";
+
+const Button = (props: any) => {
+
+    const { issorting } = useContext(GlobalState);
 
     const styles = {
         button: {
@@ -16,7 +21,7 @@ const button = (props: any) => {
         },
     };
 
-    return <button id='button' style={styles.button} onClick={props.onClick}> {props.name} </button>
+    return <button disabled={issorting} id='button' style={styles.button} onClick={props.onClick}> {props.name} </button>
 }
 
-export default button
+export default Button
