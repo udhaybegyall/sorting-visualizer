@@ -11,7 +11,15 @@ const selectionSort = async (array: any[], delay: number) => {
             }
         }
         if (i !== min) {
+
+            array[i].style.backgroundColor = '#d79921';
+            array[min].style.backgroundColor = '#d79921';
+            await timeout(delay);
+
             swap(array, i, min);
+
+            array[i].style.backgroundColor = '#383532';
+            array[min].style.backgroundColor = '#383532';
             await timeout(delay);
         }
     }
