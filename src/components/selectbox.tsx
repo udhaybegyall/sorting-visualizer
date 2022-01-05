@@ -82,6 +82,7 @@ const Selectbox = () => {
                 onChange={(selected: any) => setAlgo!(selected.value)}
                 placeholder="Select algorithm"
                 isDisabled={issorting}
+                isSearchable={false}
             />
         </div>
     )
